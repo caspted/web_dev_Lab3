@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vet Clinic Patient Form</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+         text-align: center;
+        }
+
+        form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+
+        label {
+        display: block;
+        text-align: left;
+        }
+
+        input {
+        width: 100%;
+        margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vet Clinic Patient Form</h1>
+    <form id="patientForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="sickness">Sickness:</label>
+        <input type="text" id="sickness" name="sickness" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script src="app.js"></script>
+</html>
