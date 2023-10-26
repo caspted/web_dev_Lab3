@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Patient</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Patient Details</h1>
+    <form id="updateForm" action="/update-patient" method="POST">
+        <input type="hidden" name="_method" value="PATCH"> 
+        <label for="patient_name">Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required><br>
+    
+        <label for="species">Species:</label>
+        <input type="text" id="species" name="species" required><br>
+    
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+    
+        <label for="sickness">Sickness:</label>
+        <input type="text" id="sickness" name="sickness" required><br>
+    
+        <input type="hidden" name="token" value="<%= token %>">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

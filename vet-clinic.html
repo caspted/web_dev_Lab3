@@ -38,9 +38,9 @@
 </head>
 <body>
     <h1>Vet Clinic Patient Form</h1>
-    <form id="patientForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+    <form id="patientForm" action="/patient" method="post">
+        <label for="patient_name">Name:</label>
+        <input type="text" id="patient_name" name="patient_name" required><br>
 
         <label for="species">Species:</label>
         <input type="text" id="species" name="species" required><br>
@@ -54,5 +54,4 @@
         <input type="submit" value="Submit">
     </form>
 </body>
-<script src="app.js"></script>
 </html>
